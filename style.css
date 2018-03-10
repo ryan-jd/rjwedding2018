@@ -1,10 +1,16 @@
 /*----------------platform agnostic-----------------*/
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background: url("https://farm5.staticflickr.com/4799/38872120550_6616967b46_z.jpg") no-repeat center center fixed;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  
+  position: relative;
   height: 100%;
 
   color: #ffce1b;
