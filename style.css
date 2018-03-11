@@ -5,7 +5,12 @@ html, body {
 }
 
 body {
+  /* jozie and ryan in Georgia
   background: url("https://farm5.staticflickr.com/4799/38872120550_6616967b46_z.jpg") no-repeat center center fixed;
+  */
+  /* Sunflower on John Smiths */
+  background: url("https://farm5.staticflickr.com/4775/25857692207_086a4645c6_k.jpg") no-repeat center center fixed;
+  
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
