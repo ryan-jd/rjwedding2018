@@ -24,5 +24,14 @@
   </div>
   <h3>#rjwedding2018</h3>
 </body>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+    document.ontouchmove = function (e) {
+      e.preventDefault();
+    }
+  });
+</script>
 
 </html>
