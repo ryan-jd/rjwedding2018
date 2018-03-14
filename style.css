@@ -18,15 +18,17 @@ body {
   /* Sunflower on John Smiths uncropped */
   /* background: url("https://farm5.staticflickr.com/4775/25857692207_086a4645c6_k.jpg") no-repeat center center fixed; */
   /* Sunflower on John Smiths 16:9 */
-  background: url("https://farm5.staticflickr.com/4781/40757784491_8b98f855b3_k.jpg") no-repeat center center fixed;
-
+  /*background: url("https://farm5.staticflickr.com/4781/40757784491_8b98f855b3_k.jpg") no-repeat center center fixed;*/
   /* Sunflower on John Smiths mobile_portrait */
   /* background: url("https://farm5.staticflickr.com/4801/40048240064_7a693121a4_k.jpg") no-repeat center center fixed; */
-
+  /* Sunflower on John Smiths tablet_portrait */
+  /* background: url("https://farm1.staticflickr.com/792/39003386090_bf10b94459_k.jpg") no-repeat center center fixed; */
+/*
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  */
 
   position: relative;
 
@@ -78,19 +80,13 @@ h3 {
 
 /* Portrait phones and down */
 @media (max-width: 480px) {
-  /* body {
-    /* Sunflower on John Smiths mobile_portrait
-    background: url("https://farm5.staticflickr.com/4801/40048240064_7a693121a4_k.jpg") no-repeat center center fixed;
-  } */
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
   body {
-    /* Sunflower on John Smiths 16:9
-    background: url("https://farm5.staticflickr.com/4781/40757784491_8b98f855b3_k.jpg") no-repeat center center fixed !important;
-    */
-    text-align: center;
+    /* Sunflower on John Smiths mobile_portrait */
+    background: url("https://farm5.staticflickr.com/4801/40048240064_7a693121a4_k.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
   h1 {
@@ -105,19 +101,87 @@ h3 {
   }
 
   #enter-website-button {
+    width: 75%;
     font-size: 2.5em;
-    margin-top: 200px;
+  }
+}
+
+/* Landscape phone to portrait tablet ONLY */
+/* @media (min-width: 481px) and (max-width: 767px) { */
+@media (min-width: 481px) and (max-width: 1024px) {
+  body {
+    /* Sunflower on John Smiths tablet_portrait */
+    background: url("https://farm1.staticflickr.com/792/39003386090_bf10b94459_k.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  h1 {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 6em;
+  }
+
+  h2 {
+    margin-top: 10px;
+    font-size: 2.5em;
+  }
+
+  #enter-website-button {
+    width: 400px;
+    font-size: 4em;
+  }
+}
+
+
+/* Landscape phone to portrait tablet and down */
+/* @media (max-width: 767px) { */
+@media (max-width: 1024px) {
+  body {
+    text-align: center
+  }
+
+/*
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 3.5em;
+  }
+
+  h2 {
+    margin-top: 0px;
+    font-size: 1.5em;
+  }
+
+  */
+
+  #enter-website-button {
+    /*font-size: 2.5em; */
+    /*margin-top: 150px; */
+    /*width: 75%; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 /*--------------------desktops------------------------*/
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) {
-  /* body {
-    /* Sunflower on John Smiths 16:9
-    background: url("https://farm5.staticflickr.com/4781/40757784491_8b98f855b3_k.jpg") no-repeat center center fixed !important;
-  } */
+/* @media (min-width: 768px) { */
+@media (min-width: 1025px) {
+  body {
+    /* Sunflower on John Smiths 16:9 */
+    background: url("https://farm5.staticflickr.com/4781/40757784491_8b98f855b3_k.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 
   .screen-middle {
     position: fixed;
@@ -143,7 +207,8 @@ h3 {
   }
 
   #enter-website-button {
-    font-size: 3em;
+    margin-top: 20px;
+    font-size: 4em;
   }
 }
 
