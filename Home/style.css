@@ -4,17 +4,20 @@ body {
   background-color: #ffd562;
   color: #0000ff;
   width: 95%;
+  margin: auto;
 }
 
 #main-content {
   text-align: center;
   width: 95%;
+  margin: auto;
 }
 
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p { font-family: 'IM Fell Double Pica SC', serif; }
 
 #Invite-Image {
+  padding-top: 20px;
   border-radius: 100%;
 }
 
