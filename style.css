@@ -25,7 +25,7 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3 { font-family: 'IM Fell Double Pica SC', serif; }
 
-h3 {
+#tag_rjwedding2018 {
   font-size: 2em;
   position: fixed;
   bottom: 0px;
@@ -66,12 +66,21 @@ h3 {
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   body {
     /* Sunflower on John Smiths mobile_portrait */
-    background: url("https://farm5.staticflickr.com/4801/40048240064_7a693121a4_k.jpg") no-repeat center center fixed;
+    background: url("./Images/Entry_page/entry_page_bg_mobile_portrait.jpg") no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
+
+  /* body {
+    /* Sunflower on John Smiths mobile_portrait
+    background: url("https://farm5.staticflickr.com/4801/40048240064_7a693121a4_k.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } */
 
   h1 {
     margin-top: 20px;
@@ -115,13 +124,22 @@ h3 {
 /* Portrait tablets ONLY */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
   body {
-    /* Sunflower on John Smiths tablet_portrait */
-    background: url("https://farm1.staticflickr.com/792/39003386090_bf10b94459_k.jpg") no-repeat center center fixed;
+    /* Sunflower on John Smiths mobile_portrait */
+    background: url("./Images/Entry_page/entry_page_bg_tablets_portrait.jpg") no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
+
+  /* body {
+    /* Sunflower on John Smiths tablet_portrait
+    background: url("https://farm1.staticflickr.com/792/39003386090_bf10b94459_k.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } */
 
   h1 {
     margin-top: 100px;
@@ -157,14 +175,23 @@ h3 {
 /* All desktops, landscape phones and landscape tablets */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
   body {
-    /* Sunflower on John Smiths 16:9 */
+    /* Sunflower on John Smiths mobile_portrait */
+    background: url("./Images/Entry_page/entry_page_bg_landscape.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  /* body {
+    /* Sunflower on John Smiths 16:9
     background: url("https://farm5.staticflickr.com/4781/40757784491_8b98f855b3_k.jpg") no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
-}
+} */
 
 /*-------------landscape tablets / desktops------------------------*/
 
