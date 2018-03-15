@@ -1,0 +1,131 @@
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+body {
+  /* corn #FBEC5D */
+  background-color: #ffd562;
+  color: #0000ff;
+  width: 100%;
+}
+
+#main-content { width: 95%; }
+
+h1 { font-family: 'Alex Brush', cursive; }
+h2, h3, p { font-family: 'IM Fell Double Pica SC', serif; }
+
+#RSVP-form {
+  width: 95%;
+}
+
+#RSVP-alt-message {
+  padding-bottom: 20px;
+}
+
+#tag_rjwedding2018 {
+  text-align: right;
+  font-size: 2em;
+  padding-top: 30px;
+}
+
+
+/* All phones and tablets */
+@media only screen and (max-width: 1024px) {
+
+}
+
+/* All PORTRAIT phones and tablets */
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+
+}
+
+/* Portrait phones ONLY */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  #Invite-Image {
+    background: url("../Images/RSVP_page/invite_on_beach.jpg") no-repeat center top;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 35vh;
+  }
+}
+
+/* Portrait tablets ONLY */
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+  #Invite-Image {
+    background: url("../Images/RSVP_page/invite_on_beach_tablets.jpg") no-repeat center bottom;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+  }
+
+  h1 {
+    font-size: 5.5em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  #tag_rjwedding2018 {
+    font-size: 3em;
+  }
+}
+
+/* Landscape phones ONLY */
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+
+}
+
+/* All desktops, landscape phones and landscape tablets */
+@media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
+  #Invite-Image {
+    background: url("../Images/RSVP_page/invite_on_beach_desktops.jpg") no-repeat center bottom;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+}
+
+/* Landscape tablets, desktops and up */
+@media only screen and (min-width: 768px) and (orientation: landscape), only screen and (min-width: 1025px) {
+
+}
+
+/* Large desktops */
+@media (min-width: 1200px) {
+
+}
+
+/* All other devices */
+/* @media only screen and (min-width: 768px) and (orientation: portrait), only screen and (orientation: landscape) {
+  #Invite-Image {
+    background: url("../Images/RSVP_page/invite_on_beach_tablets.jpg") no-repeat center bottom;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+  }
+} */
