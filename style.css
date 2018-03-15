@@ -1,6 +1,4 @@
 /* TO DO:
-- get background images to flick between dp and mb
-- send link to RSVP page
 - set up RSVP page
  */
 
@@ -11,27 +9,7 @@ html, body {
 }
 
 body {
-  /* jozie and ryan in Georgia
-  background: url("https://farm5.staticflickr.com/4799/38872120550_6616967b46_z.jpg") no-repeat center center fixed;
-  */
-
-  /* Sunflower on John Smiths uncropped */
-  /* background: url("https://farm5.staticflickr.com/4775/25857692207_086a4645c6_k.jpg") no-repeat center center fixed; */
-  /* Sunflower on John Smiths 16:9 */
-  /*background: url("https://farm5.staticflickr.com/4781/40757784491_8b98f855b3_k.jpg") no-repeat center center fixed;*/
-  /* Sunflower on John Smiths mobile_portrait */
-  /* background: url("https://farm5.staticflickr.com/4801/40048240064_7a693121a4_k.jpg") no-repeat center center fixed; */
-  /* Sunflower on John Smiths tablet_portrait */
-  /* background: url("https://farm1.staticflickr.com/792/39003386090_bf10b94459_k.jpg") no-repeat center center fixed; */
-/*
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  */
-
   position: relative;
-
   color: #ffce1b;
 }
 
@@ -41,8 +19,7 @@ body {
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                            supported by Chrome and Opera */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
 h1 { font-family: 'Alex Brush', cursive; }
@@ -58,7 +35,6 @@ h3 {
 #enter-website-button {
   color: #ffce1b;
   font-family: 'Alex Brush';
-  /* font-family: 'IM Fell Double Pica SC'; */
   background: Transparent no-repeat;
   border: 3px solid #0000ff;
   /* border: 3px solid #ffce1b; */
@@ -78,8 +54,16 @@ h3 {
 
 /*-----------end of platform agnostic------------*/
 
+/* All mobiles and tablets */
+@media only screen and (max-width: 1024px) {
+  body { text-align: center }
+}
+
 /* Portrait phones and down */
-@media (max-width: 480px) {
+/* @media only screen and (max-width: 480px) { */
+
+/* Portrait phones and down */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   body {
     /* Sunflower on John Smiths mobile_portrait */
     background: url("https://farm5.staticflickr.com/4801/40048240064_7a693121a4_k.jpg") no-repeat center center fixed;
@@ -101,49 +85,13 @@ h3 {
   }
 
   #enter-website-button {
-    width: 75%;
+    width: 85%;
     font-size: 2.5em;
   }
 }
 
-/* Landscape phone to portrait tablet ONLY */
-/* @media (min-width: 481px) and (max-width: 767px) { */
-@media (min-width: 481px) and (max-width: 1024px) {
-  body {
-    /* Sunflower on John Smiths tablet_portrait */
-    background: url("https://farm1.staticflickr.com/792/39003386090_bf10b94459_k.jpg") no-repeat center center fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  h1 {
-    margin-top: 50px;
-    margin-bottom: 0px;
-    font-size: 6em;
-  }
-
-  h2 {
-    margin-top: 10px;
-    font-size: 2.5em;
-  }
-
-  #enter-website-button {
-    width: 400px;
-    font-size: 4em;
-  }
-}
-
-
-/* Landscape phone to portrait tablet and down */
-/* @media (max-width: 767px) { */
-@media (max-width: 1024px) {
-  body {
-    text-align: center
-  }
-
-/*
+/* Landscape phones ONLY */
+@media only screen and (max-width: 767px) and (orientation: landscape) {
   h1 {
     margin-top: 20px;
     margin-bottom: 0px;
@@ -155,12 +103,50 @@ h3 {
     font-size: 1.5em;
   }
 
-  */
+  #enter-website-button {
+    /* width: 9em; */
+    font-size: 2.5em;
+  }
+}
+
+/* Landscape phone to portrait tablet ONLY */
+/* @media (min-width: 481px) and (max-width: 767px) { */
+
+/* Portrait tablets ONLY */
+@media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    /* Sunflower on John Smiths tablet_portrait */
+    background: url("https://farm1.staticflickr.com/792/39003386090_bf10b94459_k.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  h1 {
+    margin-top: 100px;
+    margin-bottom: 0px;
+    font-size: 5.5em;
+  }
+
+  h2 {
+    margin-top: 10px;
+    font-size: 2.5em;
+  }
 
   #enter-website-button {
-    /*font-size: 2.5em; */
-    /*margin-top: 150px; */
-    /*width: 75%; */
+    width: 8em;
+    font-size: 3.5em;
+  }
+}
+
+
+/* Landscape phone to portrait tablet and down */
+/* @media (max-width: 767px) { */
+
+/* All portrait phones and tablets */
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  #enter-website-button {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -168,11 +154,8 @@ h3 {
   }
 }
 
-/*--------------------desktops------------------------*/
-
-/* Portrait tablet to landscape and desktop */
-/* @media (min-width: 768px) { */
-@media (min-width: 1025px) {
+/* All desktops, landscape phones and landscape tablets */
+@media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
   body {
     /* Sunflower on John Smiths 16:9 */
     background: url("https://farm5.staticflickr.com/4781/40757784491_8b98f855b3_k.jpg") no-repeat center center fixed;
@@ -181,8 +164,15 @@ h3 {
     -o-background-size: cover;
     background-size: cover;
   }
+}
 
+/*-------------landscape tablets / desktops------------------------*/
 
+/* Portrait tablet to landscape and desktop */
+/* @media (min-width: 768px) { */
+
+/* Landscape tablets, desktops and up */
+@media only screen and (min-width: 768px) and (orientation: landscape), only screen and (min-width: 1025px) {
   .screen-middle {
     position: fixed;
     top: 20%;
@@ -212,7 +202,7 @@ h3 {
   }
 }
 
-/* Large desktop */
+/* Large desktops */
 @media (min-width: 1200px) {
 
 }
