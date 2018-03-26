@@ -8,32 +8,35 @@
 
   <title>rjwedding2018-RSVP</title>
 
+  <!-- manual style sheet -->
   <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Alex+Brush|IM+Fell+Double+Pica+SC" rel="stylesheet">
+
 </head>
 
 <body class="center">
 
+  <div id="nav-icon3" data-value="0" onclick="toggleNav(this)">
+  <!--   <div id="nav-icon3"> -->
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav id="mySidenav" class="sidenav">
+    <a class="active-page" href="#">RSVP</a>
+    <a href="#">Our Wedding</a>
+    <a href="#">Accommodation</a>
+    <a href="#">Getting Here & Transport</a>
+    <a href="#">Gifts</a>
+  </nav>
+
   <div id="Invite-Image" class="center">
   </div>
 
-  <!-- <img alt="Invite_Image" id="Invite-Image" class="center" src="../Images/RSVP_page/invite_on_beach.jpg"/> -->
-
-  <!-- <picture id="Invite-Image" class="center">
-    <!- and (max-width: 480px)
-    <!- /* Portrait devices */
-    <img src="../Images/RSVP_page/invite_on_beach.jpg">
-    <!- <source media="only screen and (min-width: 200px) and (orientation: portrait)" srcset="../Images/RSVP_page/invite_on_beach.jpg"> -->
-    <!-- /* Landscape devices */
-    <source media="only screen and (orientation: landscape)" srcset="../Images/RSVP_page/invite_on_beach.jpg">
-    <!- <source media="(min-width: 480px)" srcset="MediumImage.png">
-    <!- <img src="../Images/RSVP_page/invite_on_beach.jpg" alt="Invite-On-Beach">
-  </picture> -->
-
   <div id="main-content" class="center">
-    <!-- <img alt="Invite_Image" id="Invite-Image"/> -->
-    <!-- <img alt="Invite_Image" id="Invite-Image" src="../Images/RSVP_page/invite_on_beach.jpg" width="320px" height="240px"/> -->
-    <!-- <img alt="welcome_background" id="ryan-not-working" src="https://scontent.fbda2-1.fna.fbcdn.net/v/t1.0-0/p206x206/283900_10151603415876348_807081961_n.jpg?oh=db0127f28c1428c5227e50db69cab216&oe=5B04327A"/> -->
     <div class="center no-select">
       <h1>RSVP</h1>
       <p>The wedding invitation you received was printed on seed paper. If you place it in a pot of compost and water well, you can grow your own wildflowers. You can find more information <a target="_blank" href="https://www.botanicalpaperworks.com/how_plantable_paper_works#">here</a>.</p>
@@ -62,6 +65,27 @@
 </body>
 
 <script>
+  function openNav(navBtn) {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav(navBtn) {
+    document.getElementById("mySidenav").style.width = "0px";
+  }
+
+  function toggleNav(navBtn) {
+    // animate the hamburger
+    var activeNavFlag = "open";
+
+    if (navBtn.classList.contains("open")) {
+      closeNav(navBtn);
+    }
+    else {
+      openNav(navBtn);
+    }
+    navBtn.classList.toggle(activeNavFlag);
+  }
+
   document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
     // document.ontouchmove = function (e) {
