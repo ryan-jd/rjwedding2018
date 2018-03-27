@@ -76,15 +76,25 @@
 
 <script>
   function openNav(navBtn) {
+    // show sidenav
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("sidenav-light-box").style.width = "100vw";
+    // disable scrolling
     document.getElementById("body").style.overflow = "hidden";
+    document.ontouchmove = function (e) {
+      e.preventDefault();
+    }
   }
 
   function closeNav(navBtn) {
+    // hide sidenav
     document.getElementById("mySidenav").style.width = "0px";
     document.getElementById("sidenav-light-box").style.width = "0";
+    // enable scrolling
     document.getElementById("body").style.overflow = "visible";
+    document.ontouchmove = function (e) {
+      return true;
+    }
   }
 
   function toggleNav() {
@@ -103,9 +113,6 @@
 
   document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
-    // document.ontouchmove = function (e) {
-    //   e.preventDefault();
-    // }
   });
 </script>
 
