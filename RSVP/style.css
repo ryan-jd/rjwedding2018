@@ -3,7 +3,17 @@
   margin: 0 auto;
 }
 
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
 body {
+  /* overflow: hidden; */
   /* corn #FBEC5D */
   /* sunflower orange #ffd562 */
   /* pale yellow background-color: #ffffad; */
@@ -13,18 +23,28 @@ body {
   width: 100%;
 }
 
+/* #main-content {
+  overflow: hidden;
+  position: fixed;
+} */
+
+#sidenav-light-box {
+  z-index: 1;
+  overflow: hidden;
+  position: fixed;
+  width: 0;
+  height: 100vh;
+  background-color: rgb(0,0,0,0.3);
+}
+
 #main-content { width: 95%; }
 
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
-#RSVP-form {
-  width: 95%;
-}
+#RSVP-form { width: 95%; }
 
-#RSVP-alt-message {
-  padding-bottom: 20px;
-}
+#RSVP-alt-message { padding-bottom: 20px; }
 
 #tag_rjwedding2018 {
   text-align: right;
@@ -34,14 +54,10 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
 
 /* All phones and tablets */
-@media only screen and (max-width: 1024px) {
-
-}
+@media only screen and (max-width: 1024px) { }
 
 /* All PORTRAIT phones and tablets */
-@media only screen and (max-width: 1024px) and (orientation: portrait) {
-
-}
+@media only screen and (max-width: 1024px) and (orientation: portrait) { }
 
 /* Portrait phones ONLY */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
@@ -69,23 +85,15 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
     height: 40vh;
   }
 
-  h1 {
-    font-size: 5.5em;
-  }
+  h1 { font-size: 5.5em; }
 
-  p {
-    font-size: 1.5em;
-  }
+  p { font-size: 1.5em; }
 
-  #tag_rjwedding2018 {
-    font-size: 3em;
-  }
+  #tag_rjwedding2018 { font-size: 3em; }
 }
 
 /* Landscape phones ONLY */
-@media only screen and (max-width: 767px) and (orientation: landscape) {
-
-}
+@media only screen and (max-width: 767px) and (orientation: landscape) { }
 
 /* All desktops, landscape phones and landscape tablets */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
@@ -138,9 +146,12 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
 /* The side navigation menu */
 .sidenav {
+  overflow: hidden;
+
+  z-index: 2;
   height: 100%; /* 100% Full-height */
   width: 0; /* initially hide */
-  position: fixed; /* Stay in place */
+  position: absolute; /* Stay in place */
 /*     z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
@@ -156,6 +167,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
 /* The navigation menu links */
 .sidenav a {
+  /* position: fixed; */
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -188,11 +200,11 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 /* ----------------code for nav hamburger */
 /* whole link div inc. burger and word */
 #nav-link {
-  z-index: 1;
+  z-index: 3;
   top: 20px;
   left: 20px;
   height: 50px;
-  position: fixed;
+  position: absolute;
   width: 150px;
   cursor: pointer;
 }
