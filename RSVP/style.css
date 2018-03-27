@@ -12,6 +12,11 @@
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
+.no-highlight {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: none;
+}
+
 body {
   /* overflow: hidden; */
   /* corn #FBEC5D */
