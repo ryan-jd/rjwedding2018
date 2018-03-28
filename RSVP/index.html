@@ -12,13 +12,13 @@
   <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Alex+Brush|IM+Fell+Double+Pica+SC" rel="stylesheet">
-
 </head>
 
 <body id="body" class="center">
 
+  <!-- nav link (burger and menu word) -->
   <div id="nav-link" onclick="toggleNav()" class="no-select no-highlight">
-    <div id="nav-icon3" data-value="0">
+    <div id="nav-burger-icon" data-value="0">
       <span></span>
       <span></span>
       <span></span>
@@ -29,25 +29,29 @@
     </div>
   </div>
 
+  <!-- sidenav and lightbox (shows when nav active) -->
   <div id="sidenav-light-box" onclick="toggleNav()">
   </div>
   <nav id="mySidenav" class="sidenav">
-    <a class="active-page" href="#">RSVP</a>
+    <a class="active-page" href="../RSVP">RSVP</a>
     <!-- <a href="#">Our Wedding</a> -->
     <!-- <a href="#">Accommodation</a> -->
-    <!-- <a href="#">Getting Here & Transport</a>
-    <a href="#">Gifts</a>
-    <a href="#">Gallery</a> -->
+    <!-- <a href="#">Getting Here & Transport</a> -->
+    <!-- <a href="#">Gifts</a> -->
+    <!-- <a href="#">Gallery</a> -->
   </nav>
 
-
   <div id="all-page">
-    <div id="Invite-Image" class="center">
+    <div id="Banner-Image" class="center">
     </div>
 
     <div id="main-content" class="center">
-      <div class="center no-select">
+
+      <div id="Page-Title" class="center no-select">
         <h1>RSVP</h1>
+      </div>
+
+      <div class="center">
         <p>The wedding invitation you received was printed on seed paper. If you place it in a pot of compost and water well, you can grow your own wildflowers. You can find more information <a target="_blank" href="https://www.botanicalpaperworks.com/how_plantable_paper_works#">here</a>.</p>
         <p>If you are ready to RSVP, please do so below:</p>
       </div>
@@ -65,32 +69,36 @@
       <p>Apologies, but we are still working on the rest of the website...</p>
       <p>Please be sure to check back here later for further details about the wedding, including: location, accommodation, transport and timings.</p>
 
-      <h3 id="tag_rjwedding2018">#rjwedding2018</h3>
+      <p>Click <a href="..">here</a> to return to entry page</p>
     </div>
   </div>
 
   <footer>
-    <p>Click <a href="..">here</a> to return to entry page</p>
+    <h3 id="tag_rjwedding2018">#rjwedding2018</h3>
   </footer>
 </body>
 
 <script>
+  // activate sidenav
   function openNav(navBtn) {
+    // scroll window to top (looks odd if screen locks in position when burger clicked when not fully showing)
+    window.scrollTo(0, 0);
     // show sidenav
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "200px";
     document.getElementById("sidenav-light-box").style.width = "100vw";
-    // disable scrolling
+    // disable scrolling on entire page
     document.getElementById("body").style.overflow = "hidden";
     document.ontouchmove = function (e) {
       e.preventDefault();
     }
   }
 
+  // deactivate sidenav
   function closeNav(navBtn) {
     // hide sidenav
     document.getElementById("mySidenav").style.width = "0px";
-    document.getElementById("sidenav-light-box").style.width = "0";
-    // enable scrolling
+    document.getElementById("sidenav-light-box").style.width = "0px";
+    // enable scrolling on entire page
     document.getElementById("body").style.overflow = "visible";
     document.ontouchmove = function (e) {
       return true;
@@ -98,8 +106,7 @@
   }
 
   function toggleNav() {
-    navBtn = document.getElementById("nav-icon3")
-    // animate the hamburger
+    navBtn = document.getElementById("nav-burger-icon")
     var activeNavFlag = "open";
 
     if (navBtn.classList.contains(activeNavFlag)) {

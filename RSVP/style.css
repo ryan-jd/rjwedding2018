@@ -3,6 +3,7 @@
   margin: 0 auto;
 }
 
+/* stop ability to select text */
 .no-select {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -12,13 +13,13 @@
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
+/* doesnt highlight blue when you click */
 .no-highlight {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* phones/tablets */
   outline: none;
 }
 
 body {
-  /* overflow: hidden; */
   /* corn #FBEC5D */
   /* sunflower orange #ffd562 */
   /* pale yellow background-color: #ffffad; */
@@ -28,18 +29,13 @@ body {
   width: 100%;
 }
 
-/* #main-content {
-  overflow: hidden;
-  position: fixed;
-} */
-
 #sidenav-light-box {
   z-index: 1;
   overflow: hidden;
   position: fixed;
   width: 0;
   height: 100vh;
-  background-color: rgb(0,0,0,0.3);
+  background-color: rgb(0,0,0,0.4);
 }
 
 #main-content { width: 95%; }
@@ -57,7 +53,6 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   padding-top: 30px;
 }
 
-
 /* All phones and tablets */
 @media only screen and (max-width: 1024px) { }
 
@@ -66,7 +61,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
 /* Portrait phones ONLY */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
-  #Invite-Image {
+  #Banner-Image {
     background: url("../Images/RSVP_page/invite_on_beach.jpg") no-repeat center top;
     -moz-background-size: cover;
     -webkit-background-size: cover;
@@ -79,7 +74,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
 /* Portrait tablets ONLY */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
-  #Invite-Image {
+  #Banner-Image {
     background: url("../Images/RSVP_page/invite_on_beach_tablets.jpg") no-repeat center bottom;
     background-size: cover;
     -moz-background-size: cover;
@@ -91,9 +86,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   }
 
   h1 { font-size: 5.5em; }
-
   p { font-size: 1.5em; }
-
   #tag_rjwedding2018 { font-size: 3em; }
 }
 
@@ -102,7 +95,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
 /* All desktops, landscape phones and landscape tablets */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
-  #Invite-Image {
+  #Banner-Image {
     background: url("../Images/RSVP_page/invite_on_beach_desktops.jpg") no-repeat center bottom;
     background-size: cover;
     -moz-background-size: cover;
@@ -113,66 +106,43 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
     height: 40vh;
   }
 
-  h1 {
-    font-size: 3em;
-  }
-
-  p {
-    font-size: 1.2em;
-  }
+  h1 { font-size: 3em; }
+  p { font-size: 1.2em; }
 }
 
 /* Landscape tablets, desktops and up */
 @media only screen and (min-width: 768px) and (orientation: landscape), only screen and (min-width: 1025px) {
-
+  #main-content { width: 70%; }
 }
 
 /* Large desktops */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) { }
 
-}
-
-/* All other devices */
-/* @media only screen and (min-width: 768px) and (orientation: portrait), only screen and (orientation: landscape) {
-  #Invite-Image {
-    background: url("../Images/RSVP_page/invite_on_beach_tablets.jpg") no-repeat center bottom;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    height: 40vh;
-  }
-} */
-
-
-
-
+/*----------------------------------------------- sidenav css */
 /* The side navigation menu */
 .sidenav {
+  /* disable scroll */
   overflow: hidden;
 
   z-index: 2;
-  height: 100%; /* 100% Full-height */
+  height: 100%;
   width: 0; /* initially hide */
-  position: absolute; /* Stay in place */
-/*     z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  position: absolute;
+  top: 0;
   left: 0;
   background-color: #ffce1b;
-  overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 100px;
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-.sidenav .active-page {
-  color: white;
-}
+/* show current page as white in sidenav */
+.sidenav .active-page { color: white; }
 
-/* The navigation menu links */
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover { color: white; }
+
+/* The other navigation menu links */
 .sidenav a {
-  /* position: fixed; */
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -182,27 +152,15 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   text-align: right;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: white;
-}
-
-/* applicable when pushing the page content to the right when you open the side navigation */
-/* #main-content {
-  transition: margin-left .5s;
-  padding: 20px;
-} */
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* On smaller screens, where height is less than 450px, change the style of the sidenav
+(less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 80px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav { padding-top: 80px; }
+  .sidenav a { font-size: 18px; }
 }
+/*----------------------------------------------- end of sidenav css */
 
-
-
-
-/* ----------------code for nav hamburger */
+/* ----------------------------------------------- nav hamburger css */
 /* whole link div inc. burger and word */
 #nav-link {
   z-index: 3;
@@ -214,7 +172,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   cursor: pointer;
 }
 
-/* burger and word divs separately */
+/* burger and word divs individually */
 #nav-link div {
   position: absolute;
   display: inline-block;
@@ -223,7 +181,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 }
 
 /* burger div only */
-#nav-icon3 {
+#nav-burger-icon {
   left: 0px;
   width: 50px;
   -webkit-transform: rotate(0deg);
@@ -236,7 +194,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   transition: .5s ease-in-out;
 }
 
-/* menu word div only */
+/* menu word (div only) */
 #nav-menu-word {
   position: absolute;
   right: 0px;
@@ -246,11 +204,11 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 /* menu word itself */
 #nav-menu-word h2 {
   font-size: 32px;
-  margin: 3px auto;
+  margin: 4px auto;
 }
 
 /* burger lines */
-#nav-icon3 span {
+#nav-burger-icon span {
   display: block;
   position: absolute;
   height: 7px;
@@ -269,42 +227,33 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   transition: .25s ease-in-out;
 }
 
-#nav-icon3 span:nth-child(1) {
-  top: 0px;
-}
+/* burger default (i.e. nav closed) */
+#nav-burger-icon span:nth-child(1) { top: 0px; }
+#nav-burger-icon span:nth-child(2), #nav-burger-icon span:nth-child(3) { top: 18px; }
+#nav-burger-icon span:nth-child(4) { top: 36px; }
 
-#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-  top: 18px;
-}
-
-#nav-icon3 span:nth-child(4) {
-  top: 36px;
-}
-
-#nav-icon3.open span:nth-child(1) {
+/* burger X to close (i.e. nav active) */
+#nav-burger-icon.open span:nth-child(1) {
   top: 18px;
   width: 0%;
   left: 50%;
 }
-
-#nav-icon3.open span:nth-child(2) {
+#nav-burger-icon.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
-#nav-icon3.open span:nth-child(3) {
+#nav-burger-icon.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-
-#nav-icon3.open span:nth-child(4) {
+#nav-burger-icon.open span:nth-child(4) {
   top: 18px;
   width: 0%;
   left: 50%;
 }
 
-/* ------------end of code for nav hamburger */
+/* ------------------------------------------end of nav hamburger css */
