@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>rjwedding2018-Gifts</title>
+
+  <!-- manual style sheet -->
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Alex+Brush|IM+Fell+Double+Pica+SC" rel="stylesheet">
+</head>
+
+<body id="body" class="center">
+
+  <!-- nav link (burger and menu word) -->
+  <div id="nav-link" onclick="toggleNav()" class="no-select no-highlight">
+    <div id="nav-burger-icon" data-value="0">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div id="nav-menu-word">
+      <h2>Menu</h2>
+    </div>
+  </div>
+
+  <!-- sidenav and lightbox (shows when nav active) -->
+  <div id="sidenav-light-box" onclick="toggleNav()">
+  </div>
+  <nav id="mySidenav" class="sidenav">
+    <a class="" href="../RSVP">RSVP</a>
+    <!-- <a href="#">Our Wedding</a> -->
+    <a class="" href="../Gifts">Gifts</a>
+    <a class="" href="../Getting-Here">Getting Here & Transport</a>
+    <a class="active-page" href="../Gifts">Gifts</a>
+    <!-- <a href="#">Gallery</a> -->
+
+    <p class="no-select no-highlight">(Check back later for more)</p>
+  </nav>
+
+  <div id="all-page">
+    <div id="Banner-Image" class="center">
+    </div>
+
+    <div id="main-content" class="center">
+
+      <div id="Page-Title" class="center no-select">
+        <h1>Gifts</h1>
+      </div>
+
+      <div id="Gifts-Intro" class="center">
+        <p>Jozie and Ryan are fortunate enough to have already lived together for five years and currently live abroad, which means carrying space is minimal!</p>
+        <p>Therefore, instead of requesting gifts, we ask you instead to make a donation to our chosen charities below.</p>
+        <p>These charities are in honour of close family members that will unfortunately be unable to share our wedding day with us.</p>
+      </div>
+
+      <!-- <div id="accommo-list" class="center">
+        <p>Please find below some links for local Gifts:</p>
+        <p><a href="https://www.tripadvisor.com/Hotels-g503916-Sandwich_Kent_England-Hotels.html">Trip Advisor</a></p>
+        <p><a href="https://www.trivago.com/?aDateRange%5Barr%5D=2018-06-09&aDateRange%5Bdep%5D=2018-06-10&aPriceRange%5Bto%5D=0&aPriceRange%5Bfrom%5D=0&iPathId=39723&aGeoCode%5Blat%5D=51.27536&aGeoCode%5Blng%5D=1.338706&iGeoDistanceItem=0&aSortingOrderBoosting%5B%5D=distance&aCategoryRange=0%2C1%2C2%2C3%2C4%2C5&aOverallLiking=1%2C2%2C3%2C4%2C5&sOrderBy=relevance%20desc&bTopDealsOnly=false&iRoomType=7&cpt=3972303&iIncludeAll=0&iViewType=0&bIsSeoPage=false&bIsSitemap=false&">Trivago</a></p>
+        <p><a href="https://www.airbnb.com/s/Sandwich-Bay--United-Kingdom/homes?checkin=2018-06-09&checkout=2018-06-10&adults=2&children=0&infants=0&source=mc_search_bar&refinement_paths%5B%5D=%2Fhomes&allow_override%5B%5D=&s_tag=G3_wYUib">AirBnB</a></p>
+        <p>Please note that a taxi shuttle service will be provided between 11pm and 3am for use by those staying locally (in Sandwich, Deal, Worth, Ham, Walmer and Eastry).</p>
+      </div> -->
+
+    </div>
+  </div>
+
+  <footer>
+    <div id="still-working-infooter" class="center">
+      <p>Apologies, but we are still working on the rest of the website...</p>
+      <p>Please be sure to check back here later for further details about the wedding, including: location, Gifts, transport and timings.</p>
+    </div>
+    <p>Click <a href="..">here</a> to return to entry page</p>
+    <h3 id="tag_rjwedding2018">#rjwedding2018</h3>
+  </footer>
+</body>
+
+<script>
+  // activate sidenav
+  function openNav(navBtn) {
+    // scroll window to top (looks odd if screen locks in position when burger clicked when not fully showing)
+    window.scrollTo(0, 0);
+    // show sidenav
+    document.getElementById("mySidenav").style.width = "200px";
+    document.getElementById("sidenav-light-box").style.width = "100vw";
+    // disable scrolling on entire page
+    document.getElementById("body").style.overflow = "hidden";
+    document.ontouchmove = function (e) {
+      e.preventDefault();
+    }
+  }
+
+  // deactivate sidenav
+  function closeNav(navBtn) {
+    // hide sidenav
+    document.getElementById("mySidenav").style.width = "0px";
+    document.getElementById("sidenav-light-box").style.width = "0px";
+    // enable scrolling on entire page
+    document.getElementById("body").style.overflow = "visible";
+    document.ontouchmove = function (e) {
+      return true;
+    }
+  }
+
+  function toggleNav() {
+    navBtn = document.getElementById("nav-burger-icon")
+    var activeNavFlag = "open";
+
+    if (navBtn.classList.contains(activeNavFlag)) {
+      closeNav(navBtn);
+    }
+    else {
+      openNav(navBtn);
+    }
+    navBtn.classList.toggle(activeNavFlag);
+  }
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+  });
+</script>
+
+</html>
