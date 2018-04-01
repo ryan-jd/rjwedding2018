@@ -57,9 +57,14 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   color: #ffce1b;
 } */
 
+.Charity-Section {
+  padding-top: 30px;
+}
+
 .Charity-Logo img {
   width: 90%;
   max-width: 250px;
+  border-radius: 20px;
 }
 
 .Charity-Details ul {
