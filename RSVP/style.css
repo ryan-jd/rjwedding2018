@@ -39,6 +39,7 @@ body {
 }
 
 #main-content { width: 95%; }
+#main-content a:hover, footer a:hover { color: white; }
 
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }

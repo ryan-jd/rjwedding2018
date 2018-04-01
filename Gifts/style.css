@@ -39,7 +39,7 @@ body {
 }
 
 #Banner-Image {
-  background: url("../Images/Accommodation_page/RandJ_and_toes.jpg") no-repeat center bottom;
+  background: url("../Images/Gifts_page/Heart_Hands_Default.jpg") no-repeat left bottom;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -48,6 +48,7 @@ body {
 }
 
 #main-content { width: 95%; }
+#main-content a:hover, footer a:hover { color: white; }
 
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
@@ -56,13 +57,18 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   color: #ffce1b;
 } */
 
-#Gifts-Intro {
-  width: 60%;
+.Charity-Logo img {
+  width: 90%;
+  max-width: 250px;
 }
 
+.Charity-Details ul {
+  text-align: left;
+  color: black;
+}
 
-#accommo-list a:hover {
-  color: white;
+.Charity-Details ul li {
+  padding-bottom: 5px;
 }
 
 footer {
@@ -115,6 +121,15 @@ footer #tag_rjwedding2018 {
 
   h1 { font-size: 3em; }
   p { font-size: 1.2em; }
+
+  #Gifts-Intro { width: 80%; }
+
+  .Charity-Section {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+  }
+
 }
 
 /* Landscape tablets, desktops and up */
