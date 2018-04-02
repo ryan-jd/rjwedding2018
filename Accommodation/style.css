@@ -53,6 +53,10 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
+#accommo-links p {
+  font-family: 'Source Serif Pro', serif;
+}
+
 footer {
   padding-top: 80px;
   padding-bottom: 30px;

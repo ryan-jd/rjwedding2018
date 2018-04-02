@@ -54,9 +54,9 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
-/* #Address p {
-  margin: 0px;
-} */
+#Address p, #Sandwich-to-Sandilands-List li, #Taxi-Numbers-List li, #By-Car-Directions-List li {
+  font-family: 'Source Serif Pro', serif;
+}
 
 #Map iframe {
   max-width: 250px;

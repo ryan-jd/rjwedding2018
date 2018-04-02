@@ -66,6 +66,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 .Charity-Details ul {
   text-align: left;
   color: black;
+  font-family: 'Source Serif Pro', serif;
 }
 
 .Charity-Details ul li { padding-bottom: 5px; }
