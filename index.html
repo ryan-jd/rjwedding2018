@@ -19,6 +19,7 @@
   <!--
   <img alt="welcome_background" src="https://farm5.staticflickr.com/4801/38870300420_ff45edf9ee_z.jpg" width="100%" height="100%"/>
   -->
+  <h3 id="Countdown-Timer" class="center"></h3>
   <div class="screen-middle-outer">
     <div class="screen-middle-cell">
       <div class="screen-middle center no-select">
@@ -37,6 +38,52 @@
     document.ontouchmove = function (e) {
       e.preventDefault();
     }
+
+    // Set the date we're counting down to
+    // var countDownDate = new Date("Jun 9, 2018 16:00:00").getTime();
+    // // Get todays date and time
+    // var now = new Date().getTime();
+    // // Find the distance between now an the count down date
+    // var distance = countDownDate - now;
+    // // Time calculations for days, hours, minutes and seconds
+    // var days = Math.round(distance / (1000 * 60 * 60 * 24));
+    // document.getElementById("Countdown-Timer").innerHTML = days + " days to go!";
+
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jun 9, 2018 16:00:00").getTime();
+
+    var userOffsetMins = new Date().getTimezoneOffset();
+    userOffsetMilisecs = userOffsetMins * 3600000 / 60;
+    var kentOffsetMilisecs = -1 * 3600000;
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      console.log(userOffsetMins);
+      console.log(userOffsetMilisecs);
+      var distance = (countDownDate + kentOffsetMilisecs) - (now + userOffsetMilisecs);
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("Countdown-Timer").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s to go!";
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("Countdown-Timer").innerHTML = "We're Married!";
+      }
+    }, 1000);
+
   });
 </script>
 

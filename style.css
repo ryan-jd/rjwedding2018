@@ -26,7 +26,14 @@ body {
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-h1 { font-family: 'Alex Brush', cursive; }
+#Countdown-Timer {
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+h1 {
+  font-family: 'Alex Brush', cursive;
+}
 h2, h3 { font-family: 'IM Fell Double Pica SC', serif; }
 
 #tag_rjwedding2018 {
@@ -86,15 +93,6 @@ h2, h3 { font-family: 'IM Fell Double Pica SC', serif; }
     background-size: cover;
   }
 
-  /* body {
-    /* Sunflower on John Smiths mobile_portrait
-    background: url("https://farm5.staticflickr.com/4801/40048240064_7a693121a4_k.jpg") no-repeat center center fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  } */
-
   h1 {
     margin-top: 20px;
     margin-bottom: 0px;
@@ -145,17 +143,7 @@ h2, h3 { font-family: 'IM Fell Double Pica SC', serif; }
     background-size: cover;
   }
 
-  /* body {
-    /* Sunflower on John Smiths tablet_portrait
-    background: url("https://farm1.staticflickr.com/792/39003386090_bf10b94459_k.jpg") no-repeat center center fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  } */
-
   h1 {
-    margin-top: 100px;
     margin-bottom: 0px;
     font-size: 5.5em;
   }
@@ -197,16 +185,6 @@ h2, h3 { font-family: 'IM Fell Double Pica SC', serif; }
   }
 }
 
-  /* body {
-    /* Sunflower on John Smiths 16:9
-    background: url("https://farm5.staticflickr.com/4781/40757784491_8b98f855b3_k.jpg") no-repeat center center fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-} */
-
 /*-------------landscape tablets / desktops------------------------*/
 
 /* Portrait tablet to landscape and desktop */
@@ -215,6 +193,14 @@ h2, h3 { font-family: 'IM Fell Double Pica SC', serif; }
 /* Landscape tablets, desktops and up */
 @media only screen and (min-width: 813px) and (orientation: landscape), only screen and (min-width: 1025px) {
 
+  #Countdown-Timer {
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto
+  }
   /* redesigining screen-middle for maximum browser compatability */
   .screen-middle-outer {
       display: table;
@@ -233,18 +219,6 @@ h2, h3 { font-family: 'IM Fell Double Pica SC', serif; }
       margin-right: auto;
       /* width: 600px; /*whatever width you want*/
   }
-
-  /* .screen-middle {
-    position: absolute;
-    top: 20vh;
-    height: 60vh;
-    bottom: 20vh;
-    left: 15%;
-    width: 70%;
-    right: 15%;
-
-    /* text-align: center;
-  } */
 
   h1 {
     font-size: 6em;
