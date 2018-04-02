@@ -58,10 +58,6 @@ footer {
   padding-bottom: 30px;
 }
 
-footer #still-working-infooter {
-  width: 50%;
-}
-
 footer #tag_rjwedding2018 {
   padding-right: 20px;
   text-align: right;
@@ -76,16 +72,12 @@ footer #tag_rjwedding2018 {
 
 /* Portrait phones ONLY */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
-  #Banner-Image {
-    height: 35vh;
-  }
+  #Banner-Image { height: 35vh; }
 }
 
 /* Portrait tablets ONLY */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
-  #Banner-Image {
-    height: 40vh;
-  }
+  #Banner-Image { height: 40vh; }
 
   h1 { font-size: 5.5em; }
   p { font-size: 1.5em; }
@@ -97,9 +89,7 @@ footer #tag_rjwedding2018 {
 
 /* All desktops, landscape phones and landscape tablets */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
-  #Banner-Image {
-    height: 40vh;
-  }
+  #Banner-Image { height: 40vh; }
 
   h1 { font-size: 3em; }
   p { font-size: 1.2em; }

@@ -53,17 +53,9 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
-/* #accommo-list a {
-  color: #ffce1b;
-} */
+#VirginMoney-Link { font-size: 24px; }
 
-#VirginMoney-Link {
-  font-size: 24px;
-}
-
-.Charity-Section {
-  padding-top: 30px;
-}
+.Charity-Section { padding-top: 30px; }
 
 .Charity-Logo img {
   width: 90%;
@@ -76,17 +68,11 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   color: black;
 }
 
-.Charity-Details ul li {
-  padding-bottom: 5px;
-}
+.Charity-Details ul li { padding-bottom: 5px; }
 
 footer {
   padding-top: 80px;
   padding-bottom: 30px;
-}
-
-footer #still-working-infooter {
-  width: 50%;
 }
 
 footer #tag_rjwedding2018 {
@@ -103,25 +89,18 @@ footer #tag_rjwedding2018 {
 
 /* Portrait phones ONLY */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
-  #Banner-Image {
-    height: 35vh;
-  }
+  #Banner-Image { height: 35vh; }
 
-  #Charities-Information {
-    width: 90%;
-  }
+  #Charities-Information { width: 90%; }
 }
 
 /* Portrait tablets ONLY */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
-  #Banner-Image {
-    height: 40vh;
-  }
+  #Banner-Image { height: 40vh; }
 
   h1 { font-size: 5.5em; }
   p { font-size: 1.5em; }
   #tag_rjwedding2018 { font-size: 3em; }
-
 }
 
 /* Landscape phones ONLY */
@@ -129,15 +108,12 @@ footer #tag_rjwedding2018 {
 
 /* All desktops, landscape phones and landscape tablets */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
-  #Banner-Image {
-    height: 40vh;
-  }
+  #Banner-Image { height: 40vh; }
 
   h1 { font-size: 3em; }
   p { font-size: 1.2em; }
 
   #Gifts-Intro { width: 80%; }
-
 }
 
 /* All desktops, landscape phones, landscape tablets and portrait tablets */
@@ -152,14 +128,8 @@ footer #tag_rjwedding2018 {
 /* Landscape tablets, desktops and up */
 @media only screen and (min-width: 768px) and (orientation: landscape), only screen and (min-width: 1025px) {
   #Gifts-Intro { width: 60%; }
-
-  .Charity-Section {
-    width: 25%;
-  }
-
-  #PanCan {
-    margin: auto 20px;
-  }
+  .Charity-Section { width: 25%; }
+  #PanCan { margin: auto 20px; }
 }
 
 /* Large desktops */

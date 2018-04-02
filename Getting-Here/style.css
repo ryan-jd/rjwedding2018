@@ -68,9 +68,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   color: black;
 }
 
-#Sandwich-to-Sandilands-List li, #By-Car-Directions-List li {
-  padding-bottom: 5px;
-}
+#Sandwich-to-Sandilands-List li, #By-Car-Directions-List li { padding-bottom: 5px; }
 
 #Taxi-Numbers-List { list-style-type: none; }
 #Taxi-Numbers-List li { padding-bottom: 10px; }
@@ -78,10 +76,6 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 footer {
   padding-top: 80px;
   padding-bottom: 30px;
-}
-
-footer #still-working-infooter {
-  width: 50%;
 }
 
 footer #tag_rjwedding2018 {
@@ -98,17 +92,12 @@ footer #tag_rjwedding2018 {
 
 /* Portrait phones ONLY */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
-  #Banner-Image {
-    height: 35vh;
-  }
-
+  #Banner-Image { height: 35vh; }
 }
 
 /* Portrait tablets ONLY */
 @media only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
-  #Banner-Image {
-    height: 40vh;
-  }
+  #Banner-Image { height: 40vh; }
 
   h1 { font-size: 5.5em; }
   p { font-size: 1.5em; }
@@ -120,45 +109,28 @@ footer #tag_rjwedding2018 {
 
 /* All desktops, landscape phones and landscape tablets */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
-  #Banner-Image {
-    height: 40vh;
-  }
+  #Banner-Image { height: 40vh; }
 
-  #Address-and-Map {
-    width: 80%;
-    /* margin: 0px; */
-  }
+  #Address-and-Map { width: 80%; }
 
   #Address-and-Map > div {
     max-height: 250px;
     width: 45%;
-    /* padding: 0px;
-    margin: auto;*/
     vertical-align: middle;
     display: inline-block;
   }
 
-
   #Address {
     float: right;
     padding-right: 30px;
-    /* text-align: right; */
-    /* width: 70%; */
   }
-
 
   #Map {
     text-align: left;
     padding-left: 30px;
   }
 
-  #Getting-Here-Methods {
-    max-width: 60%;
-  }
-
-  /* #Address-and-Map div p {
-
-  } */
+  #Getting-Here-Methods { max-width: 60%; }
 
   h1 { font-size: 3em; }
   p { font-size: 1.2em; }
