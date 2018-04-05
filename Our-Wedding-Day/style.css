@@ -58,9 +58,22 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   font-family: 'Source Serif Pro', serif;
 } */
 
+/* #Map {
+  display: inline-block;
+  overflow: hidden;
+  height: 180px;
+  width: 100%;
+} */
+
 #Map iframe {
+  /* position: relative;
+  top: -50px;
+  border: none;
+  height: 225px;
+  width: 250px; */
+  /* width: 400px; */
   max-width: 250px;
-  max-height: 180px;
+  max-height: 225px;
 }
 
 .List-No-Bullets {
@@ -107,15 +120,16 @@ footer #tag_rjwedding2018 {
 /* Landscape phones ONLY */
 @media only screen and (max-width: 767px) and (orientation: landscape) { }
 
-/* All desktops, landscape phones and landscape tablets */
-@media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
-  #Banner-Image { height: 40vh; }
-
-  #Itinerary-and-Map { width: 90%; }
+/* All desktops, tablets and landscape phones  */
+@media only screen and (orientation: landscape), only screen and (min-width: 1025px), only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+  #Itinerary-and-Map {
+    width: 90%;
+    margin-bottom: 50px;
+  }
 
   #Itinerary-and-Map > div {
-    max-height: 250px;
-    max-width: 45%;
+    /* height: 250px; */
+    width: 45%;
     vertical-align: middle;
     display: inline-block;
   }
@@ -129,7 +143,11 @@ footer #tag_rjwedding2018 {
     text-align: right;
     margin-right: 30px;
   }
+}
 
+/* All desktops, landscape phones and landscape tablets */
+@media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
+  #Banner-Image { height: 40vh; }
   #Getting-Here-Methods { max-width: 60%; }
 
   h1 { font-size: 3em; }

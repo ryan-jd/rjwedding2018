@@ -86,7 +86,19 @@ footer #tag_rjwedding2018 {
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   #Banner-Image { height: 35vh; }
 
+  /* #Map {
+    display: inline-block;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+  } */
+
   #Map iframe {
+    /* position: relative;
+    top: -50px;
+    border: none;
+    width: 400px; */
+
     width: 250px;
     height: 180px;
   }
