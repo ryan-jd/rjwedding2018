@@ -54,7 +54,7 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
-#Address p, #Sandwich-to-Sandilands-List li, #Taxi-Numbers-List li, #By-Car-Directions-List li {
+#Address p, .Styled-List li, #Taxi-Numbers-List li {
   font-family: 'Source Serif Pro', serif;
 }
 
@@ -63,14 +63,18 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   max-height: 180px;
 }
 
-#Sandwich-to-Sandilands-List, #By-Car-Directions-List {
+.Styled-List {
+  display: inline-block;
   text-align: left;
   color: black;
 }
 
-#Sandwich-to-Sandilands-List li, #By-Car-Directions-List li { padding-bottom: 5px; }
+.Styled-List li { padding-bottom: 5px; }
 
-#Taxi-Numbers-List { list-style-type: none; }
+#Taxi-Numbers-List {
+  list-style-type: none;
+  color: black;
+}
 #Taxi-Numbers-List li { padding-bottom: 10px; }
 
 footer {

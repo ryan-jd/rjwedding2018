@@ -53,9 +53,17 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
-#accommo-links p {
+#accommo-links p, .Styled-List {
   font-family: 'Source Serif Pro', serif;
 }
+
+.Styled-List {
+  display: inline-block;
+  text-align: left;
+  color: black;
+}
+
+.Styled-List li { padding-bottom: 5px; }
 
 footer {
   padding-top: 80px;
@@ -77,6 +85,11 @@ footer #tag_rjwedding2018 {
 /* Portrait phones ONLY */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   #Banner-Image { height: 35vh; }
+
+  #Map iframe {
+    width: 250px;
+    height: 180px;
+  }
 }
 
 /* Portrait tablets ONLY */
@@ -101,7 +114,10 @@ footer #tag_rjwedding2018 {
 
 /* Landscape tablets, desktops and up */
 @media only screen and (min-width: 768px) and (orientation: landscape), only screen and (min-width: 1025px) {
-  #main-content { width: 60%; }
+  #main-content { width: 90%; }
+  #accommo-list, #Lunch-List { width: 50%; }
+
+  /* .Styled-List { width: 70%; } */
 }
 
 /* Large desktops */
