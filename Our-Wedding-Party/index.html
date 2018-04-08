@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>rjwedding2018-Wedding Party</title>
+
+  <!-- manual style sheet -->
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Alex+Brush|IM+Fell+Double+Pica+SC|Source+Serif+Pro" rel="stylesheet">
+</head>
+
+<body id="body" class="center">
+
+  <!-- nav link (burger and menu word) -->
+  <div id="nav-link" onclick="toggleNav()" class="no-select no-highlight">
+    <div id="nav-burger-icon" data-value="0">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div id="nav-menu-word">
+      <h2>Menu</h2>
+    </div>
+  </div>
+
+  <!-- sidenav and lightbox (shows when nav active) -->
+  <div id="sidenav-light-box" onclick="toggleNav()">
+  </div>
+  <nav id="mySidenav" class="sidenav no-select no-highlight">
+    <a class="" href="../Our-Wedding-Day">Our Wedding</a>
+    <a class="active-page" href="../Wedding-Party">Wedding Party</a>
+    <a class="" href="../RSVP">RSVP</a>
+    <a class="" href="../Accommodation">Accommodation</a>
+    <a class="" href="../Getting-Here">Getting Here & Transport</a>
+    <a class="" href="../Gifts">Gifts</a>
+    <!-- <a href="#">Gallery</a> -->
+  </nav>
+
+  <div id="all-page">
+    <div id="Banner-Image" class="center">
+    </div>
+
+    <div id="main-content" class="center">
+
+      <div id="Page-Title" class="center no-select">
+        <h1>Our Wedding Party</h1>
+      </div>
+
+      <div id="Wedding-Party" class="center">
+        <p>We are excited to present our wedding party:</p>
+        <div id="Wedding-Party-Photos" class="center">
+          <div id="Photos-Row1" class="Photos-Row center">
+            <div id="Parents-of-Groom" class="Photos">
+              <img src="../Images/Our-Wedding-Party_page/Parents-of-Bride.jpg"/>
+            </div>
+            <div class="Photos-Line">
+              <svg width="100%" height="100%"><line x1="0px" y1="50%" x2="100%" y2="50%" stroke="black"/></svg>
+            </div>
+            <div id="Parents-of-Bride" class="Photos">
+              <img src="../Images/Our-Wedding-Party_page/Parents-of-Bride.jpg"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>Click <a href="..">here</a> to return to entry page</p>
+    <h3 id="tag_rjwedding2018">#rjwedding2018</h3>
+  </footer>
+</body>
+
+<script>
+  // activate sidenav
+  function openNav(navBtn) {
+    // scroll window to top (looks odd if screen locks in position when burger clicked when not fully showing)
+    window.scrollTo(0, 0);
+    // show sidenav
+    document.getElementById("mySidenav").style.width = "200px";
+    document.getElementById("sidenav-light-box").style.width = "100vw";
+    // disable scrolling on entire page
+    document.getElementById("body").style.overflow = "hidden";
+    document.ontouchmove = function (e) {
+      e.preventDefault();
+    }
+  }
+
+  // deactivate sidenav
+  function closeNav(navBtn) {
+    // hide sidenav
+    document.getElementById("mySidenav").style.width = "0px";
+    document.getElementById("sidenav-light-box").style.width = "0px";
+    // enable scrolling on entire page
+    document.getElementById("body").style.overflow = "visible";
+    document.ontouchmove = function (e) {
+      return true;
+    }
+  }
+
+  function toggleNav() {
+    navBtn = document.getElementById("nav-burger-icon")
+    var activeNavFlag = "open";
+
+    if (navBtn.classList.contains(activeNavFlag)) {
+      closeNav(navBtn);
+    }
+    else {
+      openNav(navBtn);
+    }
+    navBtn.classList.toggle(activeNavFlag);
+  }
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+  });
+</script>
+
+</html>

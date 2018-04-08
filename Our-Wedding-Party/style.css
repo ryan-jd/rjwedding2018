@@ -39,7 +39,7 @@ body {
 }
 
 #Banner-Image {
-  background: url("../Images/Our-Wedding-Day_page/Tiptoes_in-sandheart.jpg") no-repeat center bottom;
+  background: url("../Images/Our-Wedding-Party_page/Wedding-Site.jpg") no-repeat center bottom;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -54,36 +54,29 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
-/* #Itinerary p, #Sandwich-to-Sandilands-List li, #Taxi-Numbers-List li, #By-Car-Directions-List li {
-  font-family: 'Source Serif Pro', serif;
-} */
-
-/* #Map {
-  display: inline-block;
-  overflow: hidden;
-  height: 180px;
+.Photos-Row {
   width: 100%;
-} */
-
-#Map iframe {
-  /* position: relative;
-  top: -50px;
-  border: none;
-  height: 225px;
-  width: 250px; */
-  /* width: 400px; */
-  max-width: 250px;
-  max-height: 225px;
 }
 
-.List-No-Bullets {
-  text-align: left;
-  color: black;
-  font-family: 'Source Serif Pro', serif;
+.Photos-Row > div {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
-.List-No-Bullets li { padding-bottom: 5px; }
+.Photos-Line {
+  width: 30%;
+}
 
+.Photos {
+  width: 25%;
+  margin: auto;
+}
+
+.Photos img {
+  width: 100%;
+  height: auto;
+}
 
 footer {
   padding-top: 80px;
@@ -105,7 +98,6 @@ footer #tag_rjwedding2018 {
 /* Portrait phones ONLY */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   #Banner-Image { height: 35vh; }
-  Itinerary-Wrap { padding-left: 10px;}
 }
 
 /* Portrait tablets ONLY */
@@ -122,33 +114,14 @@ footer #tag_rjwedding2018 {
 
 /* All desktops, tablets and landscape phones  */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px), only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
-  #Itinerary-and-Map {
-    width: 90%;
-    margin-bottom: 50px;
-  }
-
-  #Itinerary-and-Map > div {
-    /* height: 250px; */
-    width: 45%;
-    vertical-align: middle;
-    display: inline-block;
-  }
-
-  #Itinerary {
-    float: right;
-    margin-right: 30px;
-  }
-
-  #Map {
-    text-align: left;
-    margin-left: 30px;
-  }
+  /* #Wedding-Party-Photos { width: 80%; } */
 }
 
 /* All desktops, landscape phones and landscape tablets */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
   #Banner-Image { height: 40vh; }
-  #Getting-Here-Methods { max-width: 60%; }
+
+  /* #Wedding-Party-Photos { max-width: 60%; } */
 
   h1 { font-size: 3em; }
   p { font-size: 1.2em; }
@@ -157,18 +130,10 @@ footer #tag_rjwedding2018 {
 /* Landscape tablets, desktops and up */
 @media only screen and (min-width: 768px) and (orientation: landscape), only screen and (min-width: 1025px) {
   #main-content { width: 80%; }
-  #Itinerary-Description p, #Dress-Code p {
-    width: 60%;
-    padding-bottom: 15px;
-  }
 }
 
 /* Large desktops */
-@media (min-width: 1200px) {
-  #Itinerary-and-Map > div {
-    width: 30% !important;
-  }
-}
+@media (min-width: 1200px) { }
 
 /*----------------------------------------------- sidenav css */
 /* The side navigation menu */
