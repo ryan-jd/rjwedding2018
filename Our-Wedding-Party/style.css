@@ -64,18 +64,53 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   vertical-align: middle;
 }
 
-.Photos-Line {
-  width: 30%;
+#Photos-Row1 > div, #Row1-to-Row2 > div {
+  width: 18%;
 }
 
-.Photos {
-  width: 25%;
-  margin: auto;
+/* #Photos-Row1 .Photos-Gap {
+  width: 22%;
+} */
+
+#Photos-Row2 > div, #Row2-to-Row3 > div {
+  width: 22%;
 }
+
+#Photos-Row3 .Photos, #Photos-Row4 .Photos {
+  width: 36%;
+}
+
+#Photos-Row3 img, #Photos-Row4 img {
+  width: 49%;
+}
+
+#Photos-Row3 .Photos-Gap, #Photos-Row4 .Photos-Gap {
+  width: 10%;
+}
+
+
+/* .Photos {
+  width: 22%;
+} */
 
 .Photos img {
   width: 100%;
   height: auto;
+  border-radius: 10%;
+}
+
+.Image-Footer {
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.Image-Footer p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.Photos-Row-Lines {
+  height: 50px;
 }
 
 footer {
