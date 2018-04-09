@@ -57,12 +57,22 @@
         <h1>Ryan & Jozie - Through the Years</h1>
       </div>
 
-      <div id="carousel-2009" class="carousel">
+      <div id="carousels">
+      </div>
+
+      <!-- <div id="carousel-2009" class="carousel">
         <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_Hug.jpg" />
         <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_On-Deck.JPG" />
         <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_Top-of-the-Boat.JPG" />
         <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/Bodybuilders.jpg" />
-    </div>
+      </div> -->
+
+      <!-- <div id="carousel-2010" class="carousel">
+        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_Hug.jpg" />
+        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_On-Deck.JPG" />
+        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_Top-of-the-Boat.JPG" />
+        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/Bodybuilders.jpg" />
+      </div> -->
 
     </div>
   </div>
@@ -113,70 +123,90 @@
     navBtn.classList.toggle(activeNavFlag);
   }
 
-  function toggleFullScreen(element_id) {
-    var doc = window.document;
-    var docEl = doc.getElementById(element_id);
-    // var docEl = doc.documentElement;
-
-    var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
-    var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
-
-    if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-      var lightbox = docEl.getElementsByClassName("carousel-light-box");
-      for (var i=0; i < lightbox.length; i++) {
-        lightbox[i].style.width = "100vw";
-      }
-      requestFullScreen.call(docEl);
-    }
-    else {
-      cancelFullScreen.call(doc);
-    }
-  }
-
-  // function addPhotos(carousel_id, photos_dir) {
-  //   var carousel = document.getElementById(carousel_id);
+  // function toggleFullScreen(element_id) {
+  //   var doc = window.document;
+  //   var docEl = doc.getElementById(element_id);
+  //   // var docEl = doc.documentElement;
+  //
+  //   var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+  //   var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+  //
+  //   if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+  //     var lightbox = docEl.getElementsByClassName("carousel-light-box");
+  //     for (var i=0; i < lightbox.length; i++) {
+  //       lightbox[i].style.width = "100vw";
+  //     }
+  //     requestFullScreen.call(docEl);
+  //   }
+  //   else {
+  //     cancelFullScreen.call(doc);
+  //   }
   // }
 
-  // $( document ).ready(function() {
-  //   console.log( "JQuery working" );
-  //
-  //   // var carousel_id = "carousel-2009";
-  //   // var folder = 'http://rjwedding2018.com/Images/Through-the-Years_page/2009/';
-  //
-  //   $.ajax({
-  //     url: "../Images/Through-the-Years_page/2009/",
-  //     success: function(data){
-  //        $(data).find("a:contains(.jpg)").each(function(){
-  //           // will loop through
-  //           var filename = this.href.replace(window.location.host, "").replace("http://", "");
-  //           // var images = $(this).attr("href");
-  //
-  //           $("carousel-2009").append('<img class="carousel-image" data-flickity-lazyload="' + filename + '/>');
-  //
-  //        });
-  //     }
-  //   });
-  //
-  // });
+  function addCarousel(carousel_id, imageLinks_arr) {
+    console.log(carousel_id);
+    // console.log(imageLinks_arr);
+    var new_carousel = document.createElement("div");
+    new_carousel.id = carousel_id;
+    new_carousel.classList.add("carousel");
+
+    for (imageLink_i in imageLinks_arr) {
+      var new_img = document.createElement("img");
+      new_img.classList.add("carousel-image");
+      new_img.setAttribute("data-flickity-lazyload", imageLinks_arr[imageLink_i]);
+
+      new_carousel.appendChild(new_img);
+    }
+
+    console.log(new_carousel);
+    document.getElementById("carousels").appendChild(new_carousel);
+    // document.getElementById("main-content").appendChild(new_carousel);
+  }
+
+  var imageLinksJSON = {
+    "carousel-2009": ["../Images/Through-the-Years_page/2009/BVI_Hug.jpg",
+      "../Images/Through-the-Years_page/2009/BVI_On-Deck.jpg",
+      "../Images/Through-the-Years_page/2009/BVI_Top-of-the-Boat.jpg",
+      "../Images/Through-the-Years_page/2009/Bodybuilders.jpg"],
+  }
 
   document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
-    // var htmlString="<?php echo $htmlString; ?>";
-    // console.log(htmlString);
 
-    // addPhotos('carousel-2009', '../Images/Through-the-Years_page/2009/');
+    for (var carousel_id in imageLinksJSON) {
+      var imageLinks_arr = imageLinksJSON[carousel_id];
+      addCarousel(carousel_id, imageLinks_arr);
 
-    var elem = document.getElementById('carousel-2009');
-    var flkty = new Flickity( elem, {
-      // options
-      // cellAlign: 'left',
-      // contain: true,
-      lazyLoad: 2,
-      wrapAround: true,
-      fullscreen: true
-      // imagesLoaded: true
-    });
+    }
 
+    // for (var carousel_id in imageLinksJSON) {
+    //   var elem = document.getElementById(carousel_id);
+    //   var flkty = new Flickity( elem, {
+    //     // options
+    //     // cellAlign: 'left',
+    //     // contain: true,
+    //     lazyLoad: 2,
+    //     wrapAround: true,
+    //     fullscreen: true,
+    //     imagesLoaded: true
+    //   });
+    // }
+
+    var carousels = document.getElementsByClassName("carousel");
+
+    for (var carousel_i in carousels) {
+      var carousel = carousels[carousel_i];
+      var flkty = new Flickity( carousel, {
+        // options
+        // cellAlign: 'left',
+        // contain: true,
+        lazyLoad: 3,
+        wrapAround: true,
+        fullscreen: true,
+        imagesLoaded: true,
+        adaptiveHeight: true
+      });
+    }
 
   });
 </script>
