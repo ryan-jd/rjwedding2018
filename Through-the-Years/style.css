@@ -55,10 +55,7 @@ h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
 /* external css: flickity.css, fullscreen.css */
-
 * { box-sizing: border-box; }
-
-/* body { font-family: sans-serif; } */
 
 .carousel {
   background: #EEE;
@@ -66,9 +63,9 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
 .carousel-image {
   display: block;
-  height: 300px;
+  /* height: 300px; */
   /* set min-width, allow images to set cell width */
-  min-width: 150px;
+  /* min-width: 150px; */
   max-width: 100%;
   margin-right: 10px;
   /* vertically center */
@@ -80,65 +77,6 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   height: auto;
   max-height: 100%;
 }
-
-
-/* .carousel {
-  display: inline-block;
-  /* height: 25vw;
-  width: 45vw;
-  background-color: transparent;
-}
-
-.carousel-images {
-  height: 100%;
-  z-index: 2;
-}
-
-.active-slide {
-  height: 100%;
-  width: auto;
-  max-width: 100%;
-  z-index: 2;
-}
-
-.inactive-slide {
-  height: 0;
-  width: 0;
-} */
-
-/* .Photos-Row > div {
-  display: inline-block;
-  height: 100%;
-  vertical-align: top;
-} */
-
-/* .Photos-Row { width: 100%; }
-
-#Photos-Row1 > div, #Row1-to-Row2 > div, #Photos-Row5 > div { width: 18%; }
-#Photos-Row2 > div, #Row2-to-Row3 > div, #Row4-to-Row5 > div { width: 22%; }
-#Photos-Row3 .Photos, #Photos-Row4 .Photos, #Row3-to-Row4 > div { width: 36%; }
-#Photos-Row3 img, #Photos-Row4 img { width: 49%; }
-#Photos-Row3 .Photos-Gap, #Photos-Row4 .Photos-Gap { width: 10%; } */
-
-/* .Photos img {
-  width: 100%;
-  height: auto;
-  border-radius: 10%;
-}
-
-.Image-Footer {
-  margin-top: 2px;
-  margin-bottom: 5px;
-}
-
-.Image-Footer p {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.Photos-Row-Lines {
-  height: 50px;
-} */
 
 footer {
   padding-top: 80px;
@@ -156,26 +94,16 @@ footer #tag_rjwedding2018 {
 
 /* All PORTRAIT phones and tablets */
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
-  /* .carousel {
-    height: 48vw;
-    width: 85vw;
-  } */
 }
 
 /* Portrait phones ONLY */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   #Banner-Image { height: 35vh; }
 
-  /* #Photos-Row1 .Photos, #Photos-Row5 > div { width: 30%; }
-  #Photos-Row1 .Photos-Gap, #Row1-to-Row2 > div, #Row2-to-Row3 > div, #Row4-to-Row5 > div { width: 22%; }
-  #Photos-Row2 > div { width: 40%; }
-  #Photos-Row3 .Photos, #Photos-Row4 .Photos, #Row3-to-Row4 > div { width: 32%; }
-  #Photos-Row3 img, #Photos-Row4 img { width: 95%; }
-  #Photos-Row3 .Photos-Gap, #Photos-Row4 .Photos-Gap { width: 10%; } */
-
-  /* On mobile, groomsmen are stacked so move bridesmaid to top of div and hide rows to page boy */
-  /* #Bridesmaids { vertical-align: top; }
-  #Row4-to-Row5 .Photos-Line { display: none; } */
+  .carousel-image {
+    height: 200px;
+    min-width: 100px;
+  }
 
   .Image-Footer p { font-size: 0.8em; }
 }
@@ -195,7 +123,10 @@ footer #tag_rjwedding2018 {
 
 /* All desktops, tablets and landscape phones  */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px), only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
-  /* #Wedding-Party-Photos { width: 80%; } */
+  .carousel-image {
+    height: 300px;
+    min-width: 150px;
+  }
 }
 
 /* All desktops, landscape phones and landscape tablets */

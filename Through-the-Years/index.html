@@ -67,13 +67,6 @@
         <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/Bodybuilders.jpg" />
       </div> -->
 
-      <!-- <div id="carousel-2010" class="carousel">
-        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_Hug.jpg" />
-        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_On-Deck.JPG" />
-        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_Top-of-the-Boat.JPG" />
-        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/Bodybuilders.jpg" />
-      </div> -->
-
     </div>
   </div>
 
@@ -179,34 +172,35 @@
 
     }
 
-    // for (var carousel_id in imageLinksJSON) {
-    //   var elem = document.getElementById(carousel_id);
-    //   var flkty = new Flickity( elem, {
-    //     // options
-    //     // cellAlign: 'left',
-    //     // contain: true,
-    //     lazyLoad: 2,
-    //     wrapAround: true,
-    //     fullscreen: true,
-    //     imagesLoaded: true
-    //   });
-    // }
-
-    var carousels = document.getElementsByClassName("carousel");
-
-    for (var carousel_i in carousels) {
-      var carousel = carousels[carousel_i];
-      var flkty = new Flickity( carousel, {
+    for (var carousel_id in imageLinksJSON) {
+      var elem = document.getElementById(carousel_id);
+      var flkty = new Flickity( elem, {
         // options
         // cellAlign: 'left',
         // contain: true,
         lazyLoad: 3,
         wrapAround: true,
         fullscreen: true,
-        imagesLoaded: true,
-        adaptiveHeight: true
+        imagesLoaded: true
+        // adaptiveHeight: true
       });
     }
+
+    // var carousels = document.getElementsByClassName("carousel");
+    //
+    // for (var carousel_i in carousels) {
+    //   var carousel = carousels[carousel_i];
+    //   var flkty = new Flickity( carousel, {
+    //     // options
+    //     // cellAlign: 'left',
+    //     // contain: true,
+    //     lazyLoad: 3,
+    //     wrapAround: true,
+    //     fullscreen: true,
+    //     imagesLoaded: true,
+    //     adaptiveHeight: true
+    //   });
+    // }
 
   });
 </script>
