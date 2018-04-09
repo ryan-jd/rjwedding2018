@@ -56,6 +56,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
 #Address p, .Styled-List li, #Taxi-Numbers-List li {
   font-family: 'Source Serif Pro', serif;
+  color: black;
 }
 
 #Map iframe {
