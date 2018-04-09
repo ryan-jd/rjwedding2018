@@ -29,7 +29,7 @@ body {
   width: 100%;
 }
 
-#sidenav-light-box {
+#sidenav-light-box, .carousel-light-box {
   z-index: 1;
   overflow: hidden;
   position: fixed;
@@ -54,27 +54,57 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
+/* external css: flickity.css, fullscreen.css */
+
+* { box-sizing: border-box; }
+
+/* body { font-family: sans-serif; } */
+
 .carousel {
+  background: #EEE;
+}
+
+.carousel-image {
+  display: block;
+  height: 300px;
+  /* set min-width, allow images to set cell width */
+  min-width: 150px;
+  max-width: 100%;
+  margin-right: 10px;
+  /* vertically center */
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.carousel.is-fullscreen .carousel-image {
+  height: auto;
+  max-height: 100%;
+}
+
+
+/* .carousel {
   display: inline-block;
   /* height: 25vw;
-  width: 45vw; */
+  width: 45vw;
   background-color: transparent;
 }
 
 .carousel-images {
   height: 100%;
+  z-index: 2;
 }
 
 .active-slide {
   height: 100%;
   width: auto;
   max-width: 100%;
+  z-index: 2;
 }
 
 .inactive-slide {
   height: 0;
   width: 0;
-}
+} */
 
 /* .Photos-Row > div {
   display: inline-block;
@@ -126,10 +156,10 @@ footer #tag_rjwedding2018 {
 
 /* All PORTRAIT phones and tablets */
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
-  .carousel {
+  /* .carousel {
     height: 48vw;
     width: 85vw;
-  }
+  } */
 }
 
 /* Portrait phones ONLY */
@@ -172,10 +202,12 @@ footer #tag_rjwedding2018 {
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
   #Banner-Image { height: 40vh; }
 
-  .carousel {
+  /* .carousel {
     height: 25vw;
     width: 45vw;
-  }
+  } */
+
+
 
   /* #Wedding-Party-Photos { max-width: 60%; } */
 
