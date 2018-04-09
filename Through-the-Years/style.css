@@ -54,6 +54,28 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
+.carousel {
+  display: inline-block;
+  /* height: 25vw;
+  width: 45vw; */
+  background-color: transparent;
+}
+
+.carousel-images {
+  height: 100%;
+}
+
+.active-slide {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+.inactive-slide {
+  height: 0;
+  width: 0;
+}
+
 /* .Photos-Row > div {
   display: inline-block;
   height: 100%;
@@ -103,7 +125,12 @@ footer #tag_rjwedding2018 {
 @media only screen and (max-width: 1024px) { }
 
 /* All PORTRAIT phones and tablets */
-@media only screen and (max-width: 1024px) and (orientation: portrait) { }
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .carousel {
+    height: 48vw;
+    width: 85vw;
+  }
+}
 
 /* Portrait phones ONLY */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
@@ -144,6 +171,11 @@ footer #tag_rjwedding2018 {
 /* All desktops, landscape phones and landscape tablets */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
   #Banner-Image { height: 40vh; }
+
+  .carousel {
+    height: 25vw;
+    width: 45vw;
+  }
 
   /* #Wedding-Party-Photos { max-width: 60%; } */
 
