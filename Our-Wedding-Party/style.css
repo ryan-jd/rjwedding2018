@@ -57,7 +57,7 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 .Photos-Row > div {
   display: inline-block;
   height: 100%;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .Photos-Row { width: 100%; }
