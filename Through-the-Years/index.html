@@ -139,6 +139,8 @@
   function addCarousel(carousel_id, imageLinks_arr) {
     console.log(carousel_id);
     // console.log(imageLinks_arr);
+    var new_carousel_container = document.createElement("div");
+
     var new_carousel = document.createElement("div");
     new_carousel.id = carousel_id;
     new_carousel.classList.add("carousel");
@@ -151,8 +153,15 @@
       new_carousel.appendChild(new_img);
     }
 
-    console.log(new_carousel);
-    document.getElementById("carousels").appendChild(new_carousel);
+    new_carousel_container.appendChild(new_carousel);
+
+    var new_carousel_footer = document.createElement("p");
+    new_carousel_footer.classList.add("caption");
+    new_carousel_footer.innerHTML = carousel_id.split('-')[1];
+
+    new_carousel_container.appendChild(new_carousel_footer);
+
+    document.getElementById("carousels").appendChild(new_carousel_container);
     // document.getElementById("main-content").appendChild(new_carousel);
   }
 
@@ -161,6 +170,20 @@
       "../Images/Through-the-Years_page/2009/BVI_On-Deck.jpg",
       "../Images/Through-the-Years_page/2009/BVI_Top-of-the-Boat.jpg",
       "../Images/Through-the-Years_page/2009/Bodybuilders.jpg"],
+    "carousel-2010": ["../Images/Through-the-Years_page/2010/Eastwood.jpg",
+      "../Images/Through-the-Years_page/2010/Jozie_20th.jpg",
+      "../Images/Through-the-Years_page/2010/Jozies_House.jpg",
+      "../Images/Through-the-Years_page/2010/Newquay.jpg",
+      "../Images/Through-the-Years_page/2010/Ski-Trip.jpg"],
+    "carousel-2011": ["../Images/Through-the-Years_page/2011/Jozies-21st.jpg",
+      "../Images/Through-the-Years_page/2011/Jozies-21st_2.jpg",
+      "../Images/Through-the-Years_page/2011/Jozies-21st_3.jpg",
+      "../Images/Through-the-Years_page/2011/Sandilands.jpg",
+      "../Images/Through-the-Years_page/2011/Summer-Ball.jpg"],
+    "carousel-2012": ["../Images/Through-the-Years_page/2012/Feeding-Giraffe.jpg",
+      "../Images/Through-the-Years_page/2012/Hippo.jpg",
+      "../Images/Through-the-Years_page/2012/Jozie-21st.jpg",
+      "../Images/Through-the-Years_page/2012/Xmas-Jumpers.jpg"],
   }
 
   document.addEventListener("DOMContentLoaded", function(event) {
