@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -59,13 +61,6 @@
 
       <div id="carousels">
       </div>
-
-      <!-- <div id="carousel-2009" class="carousel">
-        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_Hug.jpg" />
-        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_On-Deck.JPG" />
-        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/BVI_Top-of-the-Boat.JPG" />
-        <img class="carousel-image" data-flickity-lazyload="../Images/Through-the-Years_page/2009/Bodybuilders.jpg" />
-      </div> -->
 
     </div>
   </div>
@@ -162,28 +157,64 @@
     new_carousel_container.appendChild(new_carousel_footer);
 
     document.getElementById("carousels").appendChild(new_carousel_container);
-    // document.getElementById("main-content").appendChild(new_carousel);
   }
 
   var imageLinksJSON = {
     "carousel-2009": ["../Images/Through-the-Years_page/2009/BVI_Hug.jpg",
-      "../Images/Through-the-Years_page/2009/BVI_On-Deck.jpg",
       "../Images/Through-the-Years_page/2009/BVI_Top-of-the-Boat.jpg",
+      "../Images/Through-the-Years_page/2009/BVI_On-Deck.jpg",
       "../Images/Through-the-Years_page/2009/Bodybuilders.jpg"],
-    "carousel-2010": ["../Images/Through-the-Years_page/2010/Eastwood.jpg",
-      "../Images/Through-the-Years_page/2010/Jozie_20th.jpg",
+    "carousel-2010": ["../Images/Through-the-Years_page/2010/Jozie_20th.jpg",
       "../Images/Through-the-Years_page/2010/Jozies_House.jpg",
+      "../Images/Through-the-Years_page/2010/Eastwood.jpg",
       "../Images/Through-the-Years_page/2010/Newquay.jpg",
       "../Images/Through-the-Years_page/2010/Ski-Trip.jpg"],
     "carousel-2011": ["../Images/Through-the-Years_page/2011/Jozies-21st.jpg",
-      "../Images/Through-the-Years_page/2011/Jozies-21st_2.jpg",
       "../Images/Through-the-Years_page/2011/Jozies-21st_3.jpg",
       "../Images/Through-the-Years_page/2011/Sandilands.jpg",
+      "../Images/Through-the-Years_page/2011/Jozies-21st_2.jpg",
       "../Images/Through-the-Years_page/2011/Summer-Ball.jpg"],
     "carousel-2012": ["../Images/Through-the-Years_page/2012/Feeding-Giraffe.jpg",
       "../Images/Through-the-Years_page/2012/Hippo.jpg",
       "../Images/Through-the-Years_page/2012/Jozie-21st.jpg",
       "../Images/Through-the-Years_page/2012/Xmas-Jumpers.jpg"],
+    "carousel-2013": ["../Images/Through-the-Years_page/2013/Ha-Long-Bay.jpg",
+      "../Images/Through-the-Years_page/2013/Graduation.jpg",
+      "../Images/Through-the-Years_page/2013/Bali-Plantation.jpg",
+      "../Images/Through-the-Years_page/2013/Canggu.jpg",
+      "../Images/Through-the-Years_page/2013/Graduation_2.jpg",
+      "../Images/Through-the-Years_page/2013/Morocco.jpg",
+      "../Images/Through-the-Years_page/2013/Uluwatu.jpg",
+      "../Images/Through-the-Years_page/2013/Vietnam.jpg",
+      "../Images/Through-the-Years_page/2013/Ha-Long-Bay_2.jpg"],
+    "carousel-2014": ["../Images/Through-the-Years_page/2014/Majorca.jpg",
+      "../Images/Through-the-Years_page/2014/Barcelona.jpg",
+      "../Images/Through-the-Years_page/2014/Camp_Nou.jpg",
+      "../Images/Through-the-Years_page/2014/SS_Tender.jpg"],
+    "carousel-2015": ["../Images/Through-the-Years_page/2015/Will-and-Vanessa-Wedding.jpg",
+      "../Images/Through-the-Years_page/2015/Big-Sur.jpg",
+      "../Images/Through-the-Years_page/2015/SD-Zoo.jpg",
+      "../Images/Through-the-Years_page/2015/Zanzibar.jpg"],
+    "carousel-2016": ["../Images/Through-the-Years_page/2016/Ski-Trip.jpg",
+      "../Images/Through-the-Years_page/2016/Empire-Point.jpg",
+      "../Images/Through-the-Years_page/2016/Elbow-Beach.jpg",
+      "../Images/Through-the-Years_page/2016/Hulk-Coaster.jpg",
+      "../Images/Through-the-Years_page/2016/Jurassic.jpg",
+      "../Images/Through-the-Years_page/2016/Macon-Georgia.jpg",
+      "../Images/Through-the-Years_page/2016/Scooter-Kidz.jpg",
+      "../Images/Through-the-Years_page/2016/Ski-Lift.jpg",
+      "../Images/Through-the-Years_page/2016/Uber-Vida.jpg"],
+    "carousel-2017": ["../Images/Through-the-Years_page/2017/Boscastle-Gone-Surfing_2.png",
+      "../Images/Through-the-Years_page/2017/Christmas-on-Beach.jpg",
+      "../Images/Through-the-Years_page/2017/Elbow-Christmas.JPG",
+      "../Images/Through-the-Years_page/2017/MagRock.JPG",
+      "../Images/Through-the-Years_page/2017/Miranda-21st.jpg",
+      "../Images/Through-the-Years_page/2017/Nica-Beach.JPG",
+      "../Images/Through-the-Years_page/2017/Volcano.JPG",
+      "../Images/Through-the-Years_page/2017/Spanish-Point.jpg"],
+    "carousel-2018": ["../Images/Through-the-Years_page/2018/Beach-Laugh_2.png",
+      "../Images/Through-the-Years_page/2018/Elbow.jpg",
+      "../Images/Through-the-Years_page/2018/Golfers.JPG"]
   }
 
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -208,22 +239,6 @@
         // adaptiveHeight: true
       });
     }
-
-    // var carousels = document.getElementsByClassName("carousel");
-    //
-    // for (var carousel_i in carousels) {
-    //   var carousel = carousels[carousel_i];
-    //   var flkty = new Flickity( carousel, {
-    //     // options
-    //     // cellAlign: 'left',
-    //     // contain: true,
-    //     lazyLoad: 3,
-    //     wrapAround: true,
-    //     fullscreen: true,
-    //     imagesLoaded: true,
-    //     adaptiveHeight: true
-    //   });
-    // }
 
   });
 </script>

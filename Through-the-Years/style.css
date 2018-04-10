@@ -1,3 +1,5 @@
+/* external css: flickity.css, fullscreen.css */
+
 .center {
   text-align: center;
   margin: 0 auto;
@@ -54,18 +56,14 @@ body {
 h1 { font-family: 'Alex Brush', cursive; }
 h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
 
-/* external css: flickity.css, fullscreen.css */
 * { box-sizing: border-box; }
 
 .carousel {
-  background: #EEE;
+  background: #efe7e2;
 }
 
 .carousel-image {
   display: block;
-  /* height: 300px; */
-  /* set min-width, allow images to set cell width */
-  /* min-width: 150px; */
   max-width: 100%;
   margin-right: 10px;
   /* vertically center */
@@ -83,10 +81,6 @@ h2, h3, p, nav a { font-family: 'IM Fell Double Pica SC', serif; }
   margin-bottom: 50px;
   font-size: 2em;
 }
-
-/* .carousel-is-fullscreen + .caption {
-  position: fixed;
-} */
 
 footer {
   padding-top: 80px;
@@ -142,15 +136,6 @@ footer #tag_rjwedding2018 {
 /* All desktops, landscape phones and landscape tablets */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px) {
   #Banner-Image { height: 40vh; }
-
-  /* .carousel {
-    height: 25vw;
-    width: 45vw;
-  } */
-
-
-
-  /* #Wedding-Party-Photos { max-width: 60%; } */
 
   h1 { font-size: 3em; }
   p { font-size: 1.2em; }
