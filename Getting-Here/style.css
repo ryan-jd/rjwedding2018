@@ -111,7 +111,12 @@ footer #tag_rjwedding2018 {
 }
 
 /* Landscape phones ONLY */
-@media only screen and (max-width: 767px) and (orientation: landscape) { }
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+  nav a {
+    padding-bottom: 2px !important;
+    font-size: 16px !important;
+  }
+}
 
 /* All desktops, tablets and landscape phones  */
 @media only screen and (orientation: landscape), only screen and (min-width: 1025px), only screen and (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
@@ -146,7 +151,7 @@ footer #tag_rjwedding2018 {
 }
 
 /* Landscape tablets, desktops and up */
-@media only screen and (min-width: 768px) and (orientation: landscape), only screen and (min-width: 1025px) {
+@media only screen and (min-width: 813px) and (orientation: landscape), only screen and (min-width: 1025px) {
   #main-content { width: 80%; }
 }
 
